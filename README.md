@@ -1,74 +1,26 @@
 # ai-trader-setup
 
-<!-- HMZ PORTFOLIO STANDARD -->
-> Portfolio status: active · Visibility: public · Source of truth: current repository source.
-<!-- END HMZ PORTFOLIO STANDARD -->
-
 > **AI Trader Setup** — HKUDS LLM-powered stock trading agent: equity analysis, signal generation, and automated recommendation pipeline.
 
-<p align="center">
-  <img src="https://raw.githubusercontent.com/hmzainjamil/ai-trader-setup/main/banner.png" width="100%" />
-</p>
+<p align="center"><a href="https://github.com/hmzainjamil/ai-trader-setup">Repository</a> · <a href="https://github.com/hmzainjamil/ai-trader-setup/commits/main">Commits</a> · <a href="https://github.com/hmzainjamil/ai-trader-setup/issues">Issues</a></p>
+<p align="center"><img alt="Documentation" src="https://img.shields.io/badge/documentation-deep%20editorial-lightgrey"> <img alt="Lifecycle" src="https://img.shields.io/badge/lifecycle-active-success"></p>
 
-<p align="center">
-  <a href="https://github.com/hmzainjamil/ai-trader-setup/stargazers"><img src="https://img.shields.io/github/stars/hmzainjamil/ai-trader-setup?style=for-the-badge&color=FFD700&labelColor=000" alt="Stars"/></a>
-  <a href="https://github.com/hmzainjamil/ai-trader-setup/forks"><img src="https://img.shields.io/github/forks/hmzainjamil/ai-trader-setup?style=for-the-badge&color=4FC3F7&labelColor=000" alt="Forks"/></a>
-  <a href="https://github.com/hmzainjamil/ai-trader-setup/issues"><img src="https://img.shields.io/github/issues/hmzainjamil/ai-trader-setup?style=for-the-badge&color=FF6B6B&labelColor=000" alt="Issues"/></a>
-  <a href="https://github.com/hmzainjamil/ai-trader-setup/pulls"><img src="https://img.shields.io/github/issues-pr/hmzainjamil/ai-trader-setup?style=for-the-badge&color=A8E6CF&labelColor=000" alt="PRs"/></a>
-  <a href="https://github.com/hmzainjamil/ai-trader-setup/commits/main"><img src="https://img.shields.io/github/commit-activity/m/hmzainjamil/ai-trader-setup?style=for-the-badge&color=DDA0DD&labelColor=000" alt="Commits"/></a>
-  <a href="https://github.com/hmzainjamil/ai-trader-setup/commits/main"><img src="https://img.shields.io/github/last-commit/hmzainjamil/ai-trader-setup?style=for-the-badge&color=98FB98&labelColor=000" alt="Last Commit"/></a>
-</p>
+<!-- HMZ DEEP README v1 -->
 
-<p align="center">
-  <img src="https://img.shields.io/badge/Stack-Python_%C2%B7_HKUDS_%C2%B7_Alpha_Vantage_%C2%B7_pandas-blue?style=flat&labelColor=555" />
-  <img src="https://img.shields.io/badge/Analysis-LLM_Powered-blue?style=flat&labelColor=555" />
-  <img src="https://img.shields.io/badge/Signals-AI_Generated-orange?style=flat&labelColor=555" />
-  <img src="https://img.shields.io/badge/Status-Active-green?style=flat&labelColor=555" />
-  <img src="https://img.shields.io/badge/License-MIT-purple?style=flat&labelColor=555" />
-</p>
+## At a glance
 
-<p align="center">
-  <a href="#why-this-exists">Why</a> ·
-  <a href="#at-a-glance">Glance</a> ·
-  <a href="#concepts">Concepts</a> ·
-  <a href="#how-it-works">How</a> ·
-  <a href="#install">Install</a> ·
-  <a href="#usage">Usage</a> ·
-  <a href="#configuration">Config</a> ·
-  <a href="#tips-and-tricks">Tips</a> ·
-  <a href="#troubleshooting">Debug</a> ·
-  <a href="#architecture">Architecture</a> ·
-  <a href="#roadmap">Roadmap</a>
-</p>
-
----
-
-## Why This Exists
-
-The HKUDS (Hong Kong University Data Science) LLM was purpose-built for financial time series reasoning — trained on earnings transcripts, SEC filings, analyst reports, and market microstructure data that generic LLMs rarely see in depth. This setup wraps the HKUDS architecture with a complete production trading research pipeline: structured data ingestion, multi-signal analysis, risk-adjusted position sizing, and recommendation output with full confidence scoring.
-
-The system pulls OHLCV equity data from Alpha Vantage and Yahoo Finance (fallback), runs NLP sentiment analysis on news feeds, earnings call transcripts, and analyst report summaries, generates directional signals (buy/hold/sell) using the HKUDS model with per-signal confidence scores, applies Kelly criterion position sizing with configurable fractional multiplier (default 0.25x Kelly for conservative sizing), and outputs daily trade recommendations with detailed supporting rationale.
-
-Backtesting framework validates signal quality against 5 years of historical data with full transaction cost modeling. Risk controls are non-negotiable: 10% maximum portfolio drawdown triggers automatic recommendation suspension, 20% single-position concentration cap, ATR-based volatility sizing adjusts positions in high-vol regimes. Critical: this system generates recommendations, not autonomous trades. Human confirmation is required for every execution. All outputs are explicitly advisory and educational — not financial advice.
-
----
-
-## At a Glance
-
-| | What you get |
+| Field | Current state |
 |---|---|
-| **HKUDS Model** | Financial LLM trained on earnings transcripts and market microstructure |
-| **Alpha Vantage** | OHLCV data, fundamentals, earnings calendar, and news feed integration |
-| **Yahoo Finance** | Real-time quotes and historical OHLCV data as fallback source |
-| **Signal Generation** | Directional buy/hold/sell signals with per-signal confidence scores |
-| **Kelly Sizing** | Position sizing via Kelly criterion with 0.25x fractional conservative cap |
-| **Sentiment Analysis** | News feed and earnings transcript NLP processing for signal enrichment |
-| **Backtesting** | 5-year historical signal validation with full transaction cost modeling |
-| **Risk Controls** | Max 10% portfolio drawdown, 20% concentration cap, ATR-based sizing |
-| **Human Gate** | No autonomous execution; all trade recommendations require human confirm |
-| **Daily Report** | Top 10 ranked opportunities with rationale, confidence, and size guidance |
+| Repository | ai-trader-setup |
+| Visibility | Public |
+| Lifecycle | Active |
+| Evidence basis | Current repository documentation and source-visible material |
 
----
+## Why this exists
+
+**AI Trader Setup** — HKUDS LLM-powered stock trading agent: equity analysis, signal generation, and automated recommendation pipeline.
+
+This README focuses on the repository's actual documented scope and separates implementation claims from plans, external dependencies, and unsupported outcomes.
 
 ## 🧠 CONCEPTS
 
@@ -84,16 +36,6 @@ Backtesting framework validates signal quality against 5 years of historical dat
 | RetryLogic | `core/retry.py` | Exponential backoff + alt-provider on persistent failure |
 | StatusTracker | `core/status.py` | Per-operation metrics: latency, cost, confidence scores |
 | Scheduler | `schedule/scheduler.py` | LaunchAgent-based cron scheduling for automation |
-
-### 🔥 Hot
-
-| Feature | Location | Description |
-|---|---|---|
-| **Primary Command** | `cli.py:main()` | Single command that fires the entire pipeline end-to-end |
-| **Tier 0 Router** | `routing/tier0.py` | Cost ladder: never burns Claude quota on internal sub-tasks |
-| **Hook Integration** | `hooks/handler.py` | Auto-triggers on Claude Code SessionStart and Stop events |
-
----
 
 ## ⚙️ HOW IT WORKS
 
@@ -123,8 +65,6 @@ LogManager: persist full run record to ~/.claude/tcc-logs/
 stdout / file output / hook callback response
 ```
 
----
-
 ## 🚀 INSTALL
 
 ```bash
@@ -138,8 +78,6 @@ python setup.py verify    # confirms all provider connections live
 python setup.py hooks     # installs Claude Code SessionStart/Stop hooks
 mkdir -p ~/.claude/tcc-logs/  # create log directory
 ```
-
----
 
 ## 📟 USAGE
 
@@ -167,8 +105,6 @@ python main.py status      # show all configured providers + health
 python main.py verify      # test live connections to all providers
 ```
 
----
-
 ## ⚙️ CONFIGURATION
 
 | Variable | Default | Description |
@@ -189,274 +125,17 @@ python main.py verify      # test live connections to all providers
 | `AUTO_RETRY_ALT` | `true` | Automatically switch provider on persistent failure |
 | `OUTPUT_DIR` | `~/Downloads` | Default directory for all generated file outputs |
 
----
+## Validation and evidence
 
-## 💡 TIPS AND TRICKS (12)
-
-<a href="#tips-setup">setup</a> · <a href="#tips-routing">routing</a> · <a href="#tips-output">output</a> · <a href="#tips-integration">integration</a>
-
-<a id="tips-setup"></a>
-■ **Setup & Config (3)**
-
-| Tip | Source |
-|---|---|
-| Run `python setup.py verify` after any `.env` change — catches missing keys before runtime failures | `setup.py` |
-| Set `LOCAL_FIRST=true` — Ollama always hit first; zero API cost on warm cached prompts | `routing/tier0.py` |
-| Use `LOG_LEVEL=DEBUG` temporarily when diagnosing provider failures; always revert to INFO afterward | `.env` |
-
-<a id="tips-routing"></a>
-■ **Model Routing (3)**
-
-| Tip | Source |
-|---|---|
-| Groq handles <4K token tasks cheapest and fastest — let default routing use it for all short operations | Groq pricing docs |
-| Gemini Flash is the long-context champion — set as explicit provider for tasks with >8K context window | Google AI Studio docs |
-| DeepSeek-V3 rivals GPT-4o on code tasks at 1/10th the cost — ideal for all code generation sub-tasks | DeepSeek benchmarks |
-
-<a id="tips-output"></a>
-■ **Output Quality (3)**
-
-| Tip | Source |
-|---|---|
-| `COMPRESS_OUTPUT=true` keeps log files small; full raw outputs available in `~/.claude/tcc-logs/raw/` | `output/formatter.py` |
-| Pipe any output to `compress` skill for additional caveman-compression before downstream storage | `~/.claude/skills/compress/` |
-| Set `CONFIDENCE_THRESHOLD=0.5` for creative tasks; `0.8` for factual or code tasks requiring high accuracy | `core/confidence.py` |
-
-<a id="tips-integration"></a>
-■ **HMZ System Integration (3)**
-
-| Tip | Source |
-|---|---|
-| This repo is part of the HMZ AI System — see claude-ai-system-backup for the full dependency and config map | `CLAUDE.md` |
-| Hook integration auto-triggers on Claude Code SessionStart — verify installation: `python setup.py hooks --check` | `hooks/handler.py` |
-| All logs write to `~/.claude/tcc-logs/` — shared log directory with MAE and TCC for unified audit trail | `logs/manager.py` |
-
----
-
-## 🔧 TROUBLESHOOTING
-
-| Issue | Cause | Fix |
-|---|---|---|
-| `ConnectionRefused :11434` | Ollama not running | `ollama serve` — never kill Ollama per CLAUDE.md rule |
-| `AuthError: 401` | API key missing, expired, or wrong variable name | Re-check `.env`; run `python setup.py verify` |
-| `TimeoutError` on all providers | Network issue or all APIs overloaded simultaneously | Increase `TIMEOUT_S` to 60; check provider status pages |
-| Low confidence scores on all outputs | Prompt too vague or context missing | Add domain context to prompt; use `--verbose` to see scores |
-| Hook not triggering on session start | Hook file not installed in settings.json | Run `python setup.py hooks --install` to register hooks |
-| Log dir missing on fresh machine | First run before directory created | `mkdir -p ~/.claude/tcc-logs/` then re-run |
-| Rate limit errors on parallel calls | Too many concurrent requests to single provider | Reduce `MAX_PARALLEL`; add `RATE_LIMIT_DELAY=1` to .env |
-
----
-
-## 📊 ARCHITECTURE
-
-```
-ai-trader-setup/
-├── core/
-│   ├── engine.py       # Primary execution logic and orchestration
-│   ├── retry.py        # Exponential backoff + alternate provider logic
-│   └── confidence.py   # 0.0-1.0 output quality scoring gate
-├── routing/
-│   └── tier0.py        # Ollama→DeepSeek→Gemini→Groq→GPT cost ladder
-├── adapters/           # Per-provider API wrappers (55+ supported)
-│   ├── groq.py
-│   ├── gemini.py
-│   ├── deepseek.py
-│   ├── openai.py
-│   └── ollama.py
-├── output/
-│   └── formatter.py    # Caveman-compression and output formatting
-├── logs/
-│   └── manager.py      # Structured JSON log persistence layer
-├── hooks/
-│   └── handler.py      # Claude Code SessionStart/Stop integration
-├── schedule/
-│   └── scheduler.py    # LaunchAgent-based cron automation setup
-├── config/
-│   └── manager.py      # .env loading, validation, hot-reload
-├── setup.py            # Install, verify, hooks setup utility
-└── main.py             # Primary CLI entrypoint
-```
-
----
-
-## 🗺️ ROADMAP
-
-| Status | Feature |
-|---|---|
-| ✅ | Core engine with provider adapter architecture |
-| ✅ | Tier 0 multi-provider routing ladder |
-| ✅ | Hook integration for Claude Code sessions |
-| ✅ | Structured JSON audit logging |
-| ✅ | LaunchAgent scheduled automation |
-| ✅ | Caveman-compressed output formatting |
-| 🔄 | Web dashboard for operation run history |
-| 🔄 | Slack/email alerting on operation failures |
-| 📋 | Auto-learn from operation outcomes to improve routing |
-| 📋 | MCP server mode for external agent tool access |
-| 📋 | Multi-machine config sync via claude-ai-system-backup |
-| 📋 | Cost analytics dashboard with per-provider spend breakdown |
-
----
-
-## ☠️ STARTUPS / BUSINESSES
-
-| This Repo / Feature | Replaced |
-|---|---|
-| **Core automation pipeline** | Manual repetitive execution of AI workflows |
-| **Tier 0 routing ladder** | Burning expensive Claude Sonnet quota on simple sub-tasks |
-| **Hook integration** | Manual context loading and setup at start of each Claude session |
-| **Structured JSON logging** | Ad-hoc `echo` debugging with no searchable or persistent audit trail |
-| **Provider retry logic** | Manual provider switching when individual APIs experience downtime |
-| **LaunchAgent scheduler** | Calendar reminders and manual triggers for routine AI operations |
-| **Confidence gate** | Manually reviewing every AI output for quality before use |
-
----
-
-## Star History
-
-[![Star History Chart](https://api.star-history.com/svg?repos=hmzainjamil/ai-trader-setup&type=Date)](https://star-history.com/#hmzainjamil/ai-trader-setup&Date)
-
----
-
-## 🔬 DEEP DIVE: IMPLEMENTATION DETAILS
-
-### Provider Selection Logic
-
-The routing engine evaluates providers in strict cost order. Each provider has a `check()` method that verifies availability before the primary call:
-
-```python
-async def route(prompt: str, task_type: str) -> str:
-    for provider in TIER0_LADDER:
-        if await provider.check():
-            result = await provider.complete(prompt, task_type)
-            if result.confidence >= CONFIDENCE_THRESHOLD:
-                return result
-    raise AllProvidersFailedError("All Tier 0 providers exhausted")
-```
-
-The `task_type` parameter drives model selection within each provider:
-- `code` → deepseek-coder-v2, gpt-4o (code optimized)
-- `text` → gemini-flash-1.5, groq-llama3-8b
-- `long_context` → gemini-1.5-pro (1M ctx), kimi-moonshot (262K ctx)
-- `fast` → groq-llama3-8b (sub-100ms), gemini-flash
-
-### Confidence Scoring
-
-Every response is scored 0.0–1.0 using a combination of:
-- **Coherence**: sentence embedding cosine similarity to prompt intent
-- **Completeness**: response length vs. expected length for task type
-- **Format**: matches expected output format (JSON, code, prose)
-- **Hallucination proxy**: factual consistency check on key entities
-
-```python
-def score(prompt: str, response: str, task_type: str) -> float:
-    coherence = cosine_sim(embed(prompt), embed(response))
-    completeness = min(len(response) / EXPECTED_LEN[task_type], 1.0)
-    format_ok = validate_format(response, task_type)
-    return 0.4 * coherence + 0.3 * completeness + 0.3 * format_ok
-```
-
-### Hook Architecture
-
-Claude Code hooks fire on session lifecycle events. The handler:
-
-```json
-{
-  "hooks": {
-    "SessionStart": [{
-      "matcher": ".*",
-      "hooks": [{"type": "command", "command": "python ~/.claude/hooks/session_start.py"}]
-    }],
-    "Stop": [{
-      "matcher": ".*",
-      "hooks": [{"type": "command", "command": "python ~/.claude/hooks/session_stop.py"}]
-    }]
-  }
-}
-```
-
-`session_start.py` loads: context from MEMORY.md, active skill list, Tier 0 routing config, and yesterday's log summary.
-`session_stop.py` writes: session learnings to session-queue.jsonl, updates MEMORY.md index, compresses old logs.
-
----
-
-## 📈 PERFORMANCE BENCHMARKS
-
-Measured on MacBook Pro M2 Pro, stable network, warm Ollama (deepseek-coder:6.7b loaded):
-
-| Operation | P50 latency | P95 latency | Cost/1K tokens |
-|---|---|---|---|
-| Ollama local (7B) | 180ms | 420ms | $0.000 |
-| Groq Llama3-8b | 95ms | 210ms | $0.0001 |
-| Gemini Flash 1.5 | 320ms | 680ms | $0.000075 |
-| DeepSeek-V3 | 410ms | 890ms | $0.00028 |
-| GPT-4o-mini | 580ms | 1200ms | $0.00015 |
-| Claude Haiku | 340ms | 720ms | $0.00025 |
-| Claude Sonnet | 1100ms | 2400ms | $0.003 |
-
-Tier 0 routing cuts average cost by **87%** vs. routing everything through Claude Sonnet.
-For typical HMZ daily workload (500K tokens/day sub-tasks), monthly savings: **~$1,200/month**.
-
----
+No dedicated test or evaluation section was available in the current README.
 
 ## 🔐 SECURITY CONSIDERATIONS
 
-### API Key Management
+## Limitations
 
-All API keys stored in `.env` — never committed to git. The `.gitignore` enforces this:
-
-```
-.env
-*.key
-secrets/
-```
-
-For production deployments, use a secrets manager:
-```bash
-# Doppler (recommended)
-doppler setup
-doppler run -- python main.py "task"
-
-# AWS Secrets Manager
-aws secretsmanager get-secret-value --secret-id hmz-ai-keys | jq -r '.SecretString' > .env
-```
-
-### Network Security
-
-- All provider API calls over HTTPS/TLS 1.3
-- No credentials in logs (keys masked as `***` in all log output)
-- Rate limit headers respected; no aggressive retry that triggers IP bans
-- Ollama bound to localhost only (`127.0.0.1:11434`); never exposed to network
-
-### Data Privacy
-
-- Prompts logged locally only; never sent to third-party analytics
-- `COMPRESS_OUTPUT=true` reduces log volume; raw logs can be disabled
-- PII detection warning on prompts containing email, phone, SSN patterns
-
----
-
-## 🤝 CONTRIBUTING
-
-Contributions welcome. Before submitting a PR:
-
-1. Run `python -m pytest tests/` — all tests must pass
-2. Add tests for any new provider adapter or routing logic
-3. Update `.env.example` for any new environment variables
-4. Follow caveman coding style: no comments stating the obvious, clear variable names
-
-```bash
-# Run full test suite
-python -m pytest tests/ -v
-
-# Run only routing tests
-python -m pytest tests/test_routing.py -v
-
-# Check code style
-ruff check .
-```
-
----
+- Planned work is not presented as completed functionality.
+- Quantitative claims require reproducible evidence.
+- External provider behavior and pricing remain external dependencies.
 
 ## 📚 RELATED REPOS IN THE HMZ AI SYSTEM
 
@@ -469,6 +148,8 @@ ruff check .
 | [hermes-ai-system](https://github.com/hmzainjamil/hermes-ai-system) | Persistent agent + 80+ skills | Uses tier0, mcp |
 | [claude-ai-system-backup](https://github.com/hmzainjamil/claude-ai-system-backup) | System backup + restore | Backs up all |
 
-
----
 <div align="center">Built by <a href="https://github.com/hmzainjamil">HMZ</a> · Part of the <a href="https://github.com/hmzainjamil/claude-ai-system">HMZ Claude AI System</a> · Zero broken workflows</div>
+
+## Maintainer
+
+[hmzainjamil](https://github.com/hmzainjamil)
