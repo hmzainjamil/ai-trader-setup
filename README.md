@@ -1,5 +1,9 @@
 # ai-trader-setup
 
+<!-- HMZ PORTFOLIO STANDARD -->
+> Portfolio status: active · Visibility: public · Source of truth: current repository source.
+<!-- END HMZ PORTFOLIO STANDARD -->
+
 > **AI Trader Setup** — HKUDS LLM-powered stock trading agent: equity analysis, signal generation, and automated recommendation pipeline.
 
 <p align="center">
